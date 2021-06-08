@@ -1,8 +1,12 @@
 module ApplicationHelper
     def boostrap_class(alert)
-        { success: 'alert-success', error: 'alert-danger', notice: 'alert-success', warning: 'alert-warning',
-          danger: 'alert-danger', alert: 'alert-danger' }[alert.to_sym]
-      end
+      { success: 'alert-success',
+      error: 'alert-danger',
+      notice: 'alert-success',
+      warning: 'alert-warning',
+      danger: 'alert-danger',
+      alert: 'alert-danger' }[alert.to_sym]
+    end
     
       def flash_messages(_opts = {})
         flash.each do |msg_type, message|

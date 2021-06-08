@@ -1,0 +1,15 @@
+<section class='form-sec'>
+  <h1>Sign Up</h1>
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+    <div class='form-group'>
+      <%= f.text_field :fullname , placeholder: 'Fullname', class: 'form-control'%>
+    </div>
+    
+    <div class='form-group'>
+      <%= f.text_field :username, placeholder: 'Username',  class: 'form-control' %>
+    </div>
+
+    <%= f.submit :Signup , class: 'form-control btn btn-primary'%>
+    <%= link_to 'Login', login_path %>
+  <% end %>
+</section>

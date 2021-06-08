@@ -1,0 +1,18 @@
+<div>
+  <h1>Sign Up</h1>
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+    <%= f.label :fullname %>
+    <%= f.text_field :fullname %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+
+    <%= f.label :cover_image %>
+    <%= f.file_field :cover_image %>
+
+    <%= f.submit :Signup %>
+  <% end %>
+</div>
