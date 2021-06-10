@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
-  before_action :get_user, only: [:index]
-  before_action :authenticate_user
+   before_action :authenticate_user, only: %i[show delete]
+   before_action :get_user, only: %i[show edit]
 
-  def index
-    @users = User.all
-  end
+  def show;  end
 
   def new
     @user = User.new
@@ -14,13 +12,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
-        flash[:success] = 'Accounted created successfully'
+        flash[:success] = 'Accounted created successfully.'
         session[:current_user] = @user.username
-        redirect_to @user
+        redirect_to root_path
     else
-        render :new
+        render new_user_path
     end
   end
 
@@ -35,7 +32,7 @@ class UsersController < ApplicationController
   private
 
   def get_user
-    @user = User.find_by(params[:id])
+    @user = User.find_by(params[:username])
   end
 
   def user_params

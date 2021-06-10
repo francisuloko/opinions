@@ -1,0 +1,64 @@
+<aside class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark blue">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <%= photo(@user) %>
+      <span class="fs-5 p-2"><%= @user.username %></span>
+    </a>
+    <hr>
+     <article class='connections d-flex'>
+        <div class='text-center'>
+          <h4>239</h4>
+          <span>Following</span>
+        </div>
+        <div class='mx-3 text-center'>
+          <h4>239</h4>
+          <span>Followers</span>
+        </div>
+      </article>
+      <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white" aria-current="page">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <i class="fas fa-globe"></i>
+          Connect
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <i class="fas fa-hashtag"></i>
+          Discover
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          People
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          Statistics
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </aside>

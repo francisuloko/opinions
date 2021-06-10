@@ -1,2 +1,19 @@
-<h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p>
+<section class="d-flex" style='height: 100vh'>
+    <%= render 'shared/aside' %>
+
+    <main class="bg-light">
+      <%= render 'shared/header' %>
+
+      <section class="container-fluid p-0 m-0">
+        <div class="row m-0 p-0">
+          <div class='col-9 opinions m-0 p-0'>
+            <%= render 'shared/tabs' %>
+            <%= render 'shared/opinions' %>
+          </div>
+          <div class='col-3 p-0 m-0'>
+            <%= render 'homepage/right-pane' %>
+          </div>
+        </div>
+      </section>
+    </main>
+</section>

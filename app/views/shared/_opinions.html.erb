@@ -1,0 +1,23 @@
+<section class='p-3 mx-3'>
+    <div class="card-body m-4 border border-1 rounded bg-op">
+        <%= form_for(@opinion, url: opinion_path) do |f| %>
+            <%= f.label 'What\'s happening?', class: 'my-2' %>
+            <%= f.text_field :text, autofocus: true, class: "form-control mb-3", placeholder: "Enter a message..." %>
+        <% end %>
+    </div>
+    <div class="card-body m-4 border border-1 rounded bg-op">
+        <h5 class="card-title border-bottom py-2">Opinions</h5>
+        <% @opinions.each do |opinion| %>
+            <div class='d-flex'>
+              <img src='#'>
+              <div class='w-100 px-3'>
+                <div class='d-flex justify-content-between align-items-center'>
+                  <span><%= current_user.username %></span>
+                   <span><%= opinion.created_at %></span>
+                </div>
+                <p><%= opinion.text %></p>
+              </div>
+            </div>
+        <% end %>
+    </div>
+</section>

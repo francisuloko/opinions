@@ -30,7 +30,7 @@ gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 # Add Bootstrap
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Gravatar images tag
 gem 'gravatar_image_tag'
 
@@ -62,6 +62,8 @@ group :development do
   gem 'rubocop', '>= 1.0', '< 2.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem "rack-livereload"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

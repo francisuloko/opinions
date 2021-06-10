@@ -1,5 +1,13 @@
 <section class='form-sec'>
   <h1>Sign Up</h1>
+  <% @user.errors.messages.values.each do |message| %>
+  <%  message.each do |msg| %>
+  <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= msg %>
+  </div>
+  <% end %>
+<% end %>
   <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
     <div class='form-group'>
       <%= f.text_field :fullname , placeholder: 'Fullname', class: 'form-control'%>

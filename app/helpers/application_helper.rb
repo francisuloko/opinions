@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def photo(user)
+    if user.photo.present?
+      image_tag(user.photo.to_s, alt: user.username, class: "rounded")
+    else
+      image_tag('https://source.unsplash.com/random/60x60', alt: user.username, class: 'rounded')
+    end
+  end
+
     def boostrap_class(alert)
       { success: 'alert-success',
       error: 'alert-danger',

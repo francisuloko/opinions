@@ -10,8 +10,8 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_one_attached :cover_image
 
-  validates :fullname, presence: { message: 'Name cannot be blank' }, length: { minimum: 2, maximum: 10 }
-  validates :username, presence: { message: 'Username cannot be blank' }, length: { minimum: 3, maximum: 10 }
+  validates :fullname, presence: { message: 'Name cannot be blank' }, length: { minimum: 2, maximum: 25 }
+  validates :username, presence: { message: 'Username cannot be blank' }, length: { minimum: 2, maximum: 25 }
   
 
   private
