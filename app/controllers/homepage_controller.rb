@@ -5,6 +5,6 @@ class HomepageController < ApplicationController
     @user = User.find_by(username: session[:username])
     @opinion = Opinion.new
     @opinions = Opinion.most_recent
-    @not_following = current_user.not_following
+    @who_to_follow = current_user.who_to_follow
   end
 end

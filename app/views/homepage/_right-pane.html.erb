@@ -4,14 +4,14 @@
         <span>WHO TO FOLLOW</span>
       </div>
       <div>
-        <% @not_following.each do |not_following| %>
+        <% @who_to_follow.each do |who_to_follow| %>
         <div class="d-flex flex-row align-items-center mt-3 mb-4">
             <div class="">
-              <%= photo(not_following)%>
+              <%= photo(who_to_follow)%>
             </div>
             <div class="">
                 <h6>
-                   <%= link_to not_following.fullname, profile_path(not_following.username), class: "text-dark" %>
+                   <%= link_to who_to_follow.fullname, profile_path(who_to_follow.username), class: "text-dark" %>
                 </h6>
                  <small class="text-gray">
                     

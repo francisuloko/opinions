@@ -3,7 +3,7 @@ module ApplicationHelper
     if user.photo.present?
       image_tag(user.photo.to_s, alt: user.username, class: "rounded")
     else
-      image_tag('https://source.unsplash.com/random/60x60', alt: user.username, class: 'rounded')
+      image_tag('default_profile.jpg', alt: user.username, class: 'rounded', style: 'width: 50px; height: 40px')
     end
   end
 
@@ -11,7 +11,7 @@ module ApplicationHelper
     if user.cover_image.present?
       image_tag(user.cover_image.to_s, alt: user.username)
     else
-      image_tag('https://source.unsplash.com/random/800x250', alt: user.username)
+      image_tag('default_cover.jpg', alt: user.username, class: 'w-100')
     end
   end
 
