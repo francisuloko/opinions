@@ -7,6 +7,14 @@ module ApplicationHelper
     end
   end
 
+  def cover_image(user)
+    if user.cover_image.present?
+      image_tag(user.cover_image.to_s, alt: user.username)
+    else
+      image_tag('https://source.unsplash.com/random/800x250', alt: user.username)
+    end
+  end
+
     def boostrap_class(alert)
       { success: 'alert-success',
       error: 'alert-danger',

@@ -1,7 +1,7 @@
-<aside class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark blue">
+<aside class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark blue" style='height: 100vh'>
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <%= photo(@user) %>
-      <span class="fs-5 p-2"><%= @user.username %></span>
+      <span class="fs-5 p-2"><%= @user.fullname %></span>
     </a>
     <hr>
      <article class='connections d-flex'>
@@ -15,34 +15,34 @@
         </div>
       </article>
       <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
+    <ul class="nav nav-pills flex-column mb-auto mx-0 px-0">
       <li class="nav-item">
-        <a href="#" class="nav-link text-white" aria-current="page">
-          <i class="fas fa-home"></i>
+        <a href="#" class="nav-link text-white px-0" aria-current="page">
+          <i class="fas fa-home me-3"></i>
           Home
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
-          <i class="fas fa-globe"></i>
+        <a href="#" class="nav-link text-white px-0">
+          <i class="fas fa-globe me-3"></i>
           Connect
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
-          <i class="fas fa-hashtag"></i>
+        <a href="#" class="nav-link text-white  px-0">
+          <i class="fas fa-hashtag me-3"></i>
           Discover
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+        <a href="#" class="nav-link text-white  px-0">
+          <i class="fas fa-user-friends me-3"></i>
           People
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+        <a href="#" class="nav-link text-white  px-0">
+          <i class="fas fa-chart-line me-3"></i>
           Statistics
         </a>
       </li>

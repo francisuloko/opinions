@@ -1,23 +1,26 @@
-<section class='form-sec'>
-  <h1>Sign Up</h1>
-  <% @user.errors.messages.values.each do |message| %>
-  <%  message.each do |msg| %>
-  <div class="alert alert-danger alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <%= msg %>
-  </div>
-  <% end %>
-<% end %>
-  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <div class='form-group'>
-      <%= f.text_field :fullname , placeholder: 'Fullname', class: 'form-control'%>
-    </div>
-    
-    <div class='form-group'>
-      <%= f.text_field :username, placeholder: 'Username',  class: 'form-control' %>
-    </div>
+<section class="text-center d-flex justify-content-center p-5 align-items-center">
+    <section class="form-signup">
+      <i class="fab fa-twitter fs-1 m-2"></i>
+      <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+      <% @user.errors.messages.values.each do |message| %>
+        <%  message.each do |msg| %>
+        <div class="alert alert-danger alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= msg %>
+        </div>
+        <% end %>
+      <% end %>
+      <%= form_for(@user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+        <div class='form-group my-2'>
+          <%= f.text_field :fullname , placeholder: 'Fullname', class: 'form-control'%>
+        </div>
+        
+        <div class='form-group my-2'>
+          <%= f.text_field :username, placeholder: 'Username',  class: 'form-control' %>
+        </div>
 
-    <%= f.submit :Signup , class: 'form-control btn btn-primary'%>
-    <%= link_to 'Login', login_path %>
-  <% end %>
+        <%= f.submit :Signup , class: 'form-control btn btn-primary my-2'%>
+        <%= link_to 'Login', login_path %>
+      <% end %>
+    </section>
 </section>

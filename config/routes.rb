@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'homepage#index'
-  get 'users/:username', to: 'users#show'
+  get 'users/new', to: 'users#new'
+  get 'users/:username', to: 'users#show', as: 'profile'
   get 'login', to: 'sessions#new'
   post 'opinion', to: 'opinions#create'
   post 'login', to: 'sessions#create'

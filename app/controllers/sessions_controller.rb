@@ -9,14 +9,13 @@ class SessionsController < ApplicationController
       flash[:notice] = "You signed in successfully."
       redirect_to root_path
     else
-      flash[:notice] = "Form is invalid"
+      flash[:notice] = "Something went wrong"
       render :new
     end
   end
 
   def destroy
     session[:username] = nil
-    flash[:success] = 'You logged out successfully.'
     redirect_to login_path
   end
 end

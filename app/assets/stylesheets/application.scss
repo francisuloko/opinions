@@ -17,21 +17,8 @@
     list-style-type: none;
 }
 
-
-.aside-nav li:nth-child(1)::before { content: '\f015'; font-family: FontAwesome; padding-right: 15px }
-.aside-nav li:nth-child(2)::before { content: '\f0ac'; font-family: FontAwesome; padding-right: 15px }
-.aside-nav li:nth-child(3)::before { content: '\f292'; font-family: FontAwesome; padding-right: 15px }
-.aside-nav li:nth-child(4)::before { content: '\f007'; font-family: FontAwesome; padding-right: 15px }
-.aside-nav li:nth-child(5)::before { content: '\f201'; font-family: FontAwesome; padding-right: 15px }
-
-
-.header-nav li,
-.opinions-tab li { display: inline;}
-.opinions-tab li { padding: 20px 10px;}
-
 .bg-twitter { background-color: #1DA1F2;}
 .blue { background-color: #001f32;}
-aside { width: 260px}
-main { width: 100%;}
+aside { width: 200px; }
 .aside-nav li { padding: 10px 0;}
 .bg-op { background-color: #fff; }

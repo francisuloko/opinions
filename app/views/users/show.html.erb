@@ -1,82 +1,20 @@
+<section class="d-flex" style='height: 100vh'>
+    <%= render 'shared/aside' %>
 
-<aside>
-  <article class='user'>
-    <%= 'photo' %>
-    <%= 'fullname' %>
-  </article>
-  <article class='connections'>
-    <div>
-       <h4>239</h4>
-       <span>Following</span>
-    </div>
-    <div>
-       <h4>239</h4>
-       <span>Followers</span>
-    </div>
-  </article>
-  <article>
-    <nav>
-      <ul class='aside-nav'>
-        <li>Home</li>
-        <li>Connect</li>
-        <li>Discover</li>
-        <li>People</li>
-        <li>Statistics</li>
-      </ul>
-    </nav>
-  </article>
-<aside>
+    <main class="bg-light w-100">
+      <%= render 'shared/header' %>
 
-<%= render 'shared/aside' %>
-
-<main>
-  <header>
-    <div>logo</div>
-    <nav>
-      <ul class='header-nav'>
-        <li>Create</li>
-        <li>Message</li>
-        <li>Search</li>
-        <li>Setting</li>
-      </ul>
-    </nav>
-  </header>
-  <%= render 'shared/header' %>
-  <section>
-    <div class='opinions'>
-      <header>
-        <div class='cover-image'>Cover Image Here</div>
-        <nav>
-          <ul class='opinions-tab'>
-            <li>OPINIONS</li>
-            <li>PHOTO</li>
-            <li>VIDEO</li>
-          </ul>
-        </nav>
-        <%= render 'shared/tabs' %>
-      </header>
-      <section class='create-post'>
-        <%= render 'shared/form' %>
+      <section class="container-fluid p-0 m-0">
+        <div class="row m-0 p-0">
+          <div class='col-9 opinions m-0 p-0'>
+            <%= cover_image(@user) %>
+            <%= render 'users/tabs' %>
+            <%= render 'users/opinions' %>
+          </div>
+          <div class='col-3 p-0 m-0'>
+            <%= render 'users/right-pane' %>
+          </div>
+        </div>
       </section>
-      <section  class='timeline'>
-        <%= 'notification' %>
-        <hr>
-        <%= render 'shared/opinions' %>
-        <%= 'See more' %>
-      <section>
-    <div>
-    <div class='right-pain'>
-      <section class='user'>
-        <div class='profile'></div>
-        <h4>Fullname</h4>
-        <span>Usename</span>
-      </section>
-      <section class='followed-by'>
-        <h4>FOLLOWED BY</h4>
-        <ul>
-          <li>small profile +</li>
-        </ul>
-      </section>
-    <div>
-  </section>
-</main>
+    </main>
+</section>

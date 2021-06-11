@@ -3,21 +3,35 @@
       <div class='border border-1 p-4'>
         <span>WHO TO FOLLOW</span>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active text-secondary mx-2 px-0" aria-current="page" href="#">TWEETS</a>
-        </li>
-      </ul>
-    </div>
+      <div>
+        <% @not_following.each do |not_following| %>
+        <div class="d-flex flex-row align-items-center mt-3 mb-4">
+            <div class="">
+              <%= photo(not_following)%>
+            </div>
+            <div class="">
+                <h6>
+                   <%= link_to not_following.fullname, profile_path(not_following.username), class: "text-dark" %>
+                </h6>
+                 <small class="text-gray">
+                    
+                </small>
+            </div>
+        </div>
+        <% end %>
+        <div class="account-type">
+          <small class="text-gray">
+            <a href="#">Popular accounts</a> |
+            <a href="#">Find friends</a>
+          </small>
+        </div>
 
-    <div class='p-0'>
-      <div class='border border-1 p-4'>
-        <span>WHO TO FOLLOW</span>
+        <h6 class="text-gray border-top border-bottom pt-3 pb-3 mt-3 mb-3">TRENDING</h6>
+
+        <p><a href="#" class="text-gray"> #remotework </a></p>
+        <p><a href="#" class="text-gray"> Education </a></p>
+        <p><a href="#" class="text-gray"> #blacklivesmatter </a></p>
+        <p><a href="#" class="text-gray"> Jacob Blake </a></p>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active text-secondary mx-2 px-0" aria-current="page" href="#">TWEETS</a>
-        </li>
-      </ul>
     </div>
 </div>

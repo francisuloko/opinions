@@ -1,8 +1,8 @@
 <div class="text-center d-flex justify-content-center p-5 align-items-center">
     <section class="form-signin">
+        <i class="fab fa-twitter fs-1 m-2"></i>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         <%= form_for(:session, url: login_path) do |f| %>
-            <i class="fab fa-twitter fs-1 m-2"></i>
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div class="form-floating">
               <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class:"form-control", id:"floatingInput"  %>
