@@ -10,14 +10,18 @@
         <% @opinions.each do |opinion| %>
             <div class=''>
               <div class="d-flex flex-row mt-3">
-                  <span><%= photo(opinion.author)%></span>
+                  <span><%= photo(opinion.author, 'rounded')%></span>
                   <div class="w-100 mx-3">
                       <div class='d-flex justify-content-between align-items-center'>
                         <span><%=link_to "#{opinion.author.fullname}", profile_path(opinion.author.username) %></span>
                         <span><%= time_ago_in_words(opinion.created_at) + ' ago' %></span>
                       </div>
-                      <div class="d-flex flex-row justify-content-between">
-                          <p class="card-text"><%= opinion.text %>  <%= like(opinion) %> </p>
+                      <div class="d-flex justify-content-between align-items-center my-2">
+                          <div><%= opinion.text %></div> 
+                          <div class='d-flex my'>
+                            <span class='mx-2'><%= like(opinion) %></span>
+                            <span><%= opinion.likes.count %></span>
+                          </div>
                       </div>
                   </div>
               </div>

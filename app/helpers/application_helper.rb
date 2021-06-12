@@ -1,9 +1,9 @@
 module ApplicationHelper
-  def photo(user)
+  def photo(user, style)
     if user.photo.present?
       image_tag(user.photo.to_s, alt: user.username, class: "rounded")
     else
-      image_tag('default_profile.jpg', alt: user.username, class: 'rounded', width: '80')
+      image_tag('default_profile.jpg', alt: user.username, class: style, width: '70', height: '70')
     end
   end
 
@@ -19,9 +19,9 @@ module ApplicationHelper
   def like(opinion)
     like = Like.find_by(opinion_id: opinion.id, user_id: current_user.id)
     if like
-      link_to('Unlike!', like_path(id: like.id, opinion_id: opinion.id), method: :delete)
+      link_to('Unlike', like_path(id: like.id, opinion_id: opinion.id), method: :delete, style: 'text-decoration: none')
     else
-      link_to('Like!', likes_path(opinion_id: opinion.id), method: :post)
+      link_to('Like', likes_path(opinion_id: opinion.id), method: :post, style: 'text-decoration: none')
     end
   end
 

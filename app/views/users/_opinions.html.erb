@@ -2,15 +2,22 @@
     <div class="card-body m-4 border border-1 rounded bg-op">
         <h5 class="card-title border-bottom py-2">Opinions</h5>
         <% @opinions.each do |opinion| %>
-            <div class='d-flex'>
-              <img src='#'>
-              <div class='w-100 px-3'>
-                <div class='d-flex justify-content-between align-items-center'>
-                  <span><%= @user.fullname %></span>
-                   <span><%= time_ago_in_words(opinion.created_at) + ' ago' %></span>
-                </div>
-                <p><%= opinion.text %></p>
-              </div>
+           <div class=''>
+              <div class="d-flex flex-row mt-3">
+                  <span><%= photo(opinion.author, 'rounded')%></span>
+                  <div class="w-100 mx-3">
+                      <div class='d-flex justify-content-between align-items-center'>
+                        <span><%=link_to "#{opinion.author.fullname}", profile_path(opinion.author.username) %></span>
+                        <span><%= time_ago_in_words(opinion.created_at) + ' ago' %></span>
+                      </div>
+                      <div class="d-flex flex-row justify-content-between py-2">
+                          <p class="card-text"><%= opinion.text %></p> 
+                          <div class='d-flex align-items-center'>
+                            <span><%= like(opinion) %></span>
+                            <span class='mx-2'><%= opinion.likes.count %></span>
+                          </div>
+                      </div>
+                  </div>
             </div>
         <% end %>
     </div>
