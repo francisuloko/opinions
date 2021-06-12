@@ -12,9 +12,9 @@
               <span class="my-0">
                 <%= link_to who.fullname, profile_path(who.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
               </span>
-              <span class="text-secondary fs-6 my-0 py-0">
-                @<span class="fs-5 fs-6"><%= who.fullname %></span>
-              </span>
+              <p class="text-secondary my-0 py-0">
+                 @<span style='font-size: 10px'><%= @user.fullname %></span>
+               </p>
           </div>
           <div><%= follow(who) %></div>
         </div>
