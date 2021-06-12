@@ -1,37 +1,23 @@
-<div class="border border-1 bg-light" style='height: 100vh'>
-    <div class='p-0'>
-      <div class='border border-1 p-4'>
-        <span>WHO TO FOLLOW</span>
-      </div>
-      <div>
-        <% @who_to_follow.each do |who_to_follow| %>
-        <div class="d-flex flex-row align-items-center mt-3 mb-4">
-            <div class="">
-              <%= photo(who_to_follow)%>
-            </div>
-            <div class="">
-                <h6>
-                   <%= link_to who_to_follow.fullname, profile_path(who_to_follow.username), class: "text-dark" %>
-                </h6>
-                 <small class="text-gray">
-                    
-                </small>
-            </div>
-        </div>
-        <% end %>
-        <div class="account-type">
-          <small class="text-gray">
-            <a href="#">Popular accounts</a> |
-            <a href="#">Find friends</a>
-          </small>
-        </div>
-
-        <h6 class="text-gray border-top border-bottom pt-3 pb-3 mt-3 mb-3">TRENDING</h6>
-
-        <p><a href="#" class="text-gray"> #remotework </a></p>
-        <p><a href="#" class="text-gray"> Education </a></p>
-        <p><a href="#" class="text-gray"> #blacklivesmatter </a></p>
-        <p><a href="#" class="text-gray"> Jacob Blake </a></p>
-      </div>
+<article class="border border-1" style='height: 100vh'>
+  <div class='p-0'>
+    <div class='border border-1 p-4'>
+      <span>WHO TO FOLLOW</span>
     </div>
-</div>
+    <% @who_to_follow.each do |who| %>
+        <div class="d-flex my-3 px-3">
+          <div class="author">
+              <%= photo(who)%>
+          </div>
+          <div class="d-flex flex-column justify-content_center fs-5 w-100 px-2" style='font-size: 12px'>
+              <span class="my-0">
+                <%= link_to who.fullname, profile_path(who.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
+              </span>
+              <span class="text-secondary fs-6 my-0 py-0">
+                @<span class="fs-5 fs-6"><%= who.fullname %></span>
+              </span>
+          </div>
+          <div><%= follow(who) %></div>
+        </div>
+      <% end %>
+  </div>
+</article>

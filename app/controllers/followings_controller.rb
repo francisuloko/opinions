@@ -1,6 +1,6 @@
 class FollowingsController < ApplicationController
   def create
-    @following = current_user.followings.new(followed_id: params[:user_id])
+    @following = current_user.request_connections.new(followed_id: params[:user_id])
     
     if @following.save
       flash[:notice] = "You are now following #{User.find(params[:user_id]).fullname}"

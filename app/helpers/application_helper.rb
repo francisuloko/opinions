@@ -3,7 +3,7 @@ module ApplicationHelper
     if user.photo.present?
       image_tag(user.photo.to_s, alt: user.username, class: "rounded")
     else
-      image_tag('default_profile.jpg', alt: user.username, class: 'rounded', style: 'width: 50px; height: 40px')
+      image_tag('default_profile.jpg', alt: user.username, class: 'rounded', width: '80')
     end
   end
 
@@ -11,7 +11,17 @@ module ApplicationHelper
     if user.cover_image.present?
       image_tag(user.cover_image.to_s, alt: user.username)
     else
-      image_tag('default_cover.jpg', alt: user.username, class: 'w-100')
+      image_tag('default_cover.jpg', alt: user.username, width: '100%', height: '220')
+    end
+  end
+
+  
+  def like(opinion)
+    like = Like.find_by(opinion_id: opinion.id, user_id: current_user.id)
+    if like
+      link_to('Unlike!', like_path(id: like.id, opinion_id: opinion.id), method: :delete)
+    else
+      link_to('Like!', likes_path(opinion_id: opinion.id), method: :post)
     end
   end
 

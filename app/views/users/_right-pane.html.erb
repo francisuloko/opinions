@@ -1,23 +1,69 @@
-<div class="border border-1 bg-light" style='height: 100vh'>
-    <div class='p-0'>
-      <div class='border border-1 p-4'>
-        <span>USER PROFILE</span>
+<section class="border border-1">
+  <article class="border border-1 p-3 d-flex flex-column justify-content-between" style='height: 220px;'>
+      <div class='d-flex'>
+        <%= follow(@user) %>
+        <%= photo(@user)%>
+        <%= link_to '[]' %>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active text-secondary mx-2 px-0" aria-current="page" href="#">TWEETS</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class='p-0'>
-      <div class='border border-1 p-4'>
-        <span>FOLLOWED BY</span>
+      <div>
+        <span class="my-0 py-0">
+          <%= @user.fullname %>
+        </span><br/>
+        <span class="text-secondary fs-6 my-0 py-0">
+          @<span class="fs-5 fs-6"><%= @user.fullname %></span>
+        </span>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active text-secondary mx-2 px-0" aria-current="page" href="#">TWEETS</a>
-        </li>
-      </ul>
-    </div>
-</div>
+      <div class='d-flex justify-content-around my-2 px-2' style="font-size: 12px">
+        <div class='text-center'>
+          <span><%= @user.opinions.count %></span><br/>
+          <span>Tweets</span>
+        </div>
+        <div class='text-center'>
+          <span><%= @user.following.count %></span><br/>
+          <span>Following</span>
+        </div>
+        <div class='text-center'>
+          <span><%= @user.followers.count %><span><br/>
+          <span>Followers</span>
+        </div>
+      </div>
+  </article>
+  <article class="p-3">
+    <h6>FOLLOWED BY</h6>
+    <% @user.followers.each do |follower| %>
+        <div class="d-flex my-3">
+          <div class="author">
+              <%= photo(follower)%>
+          </div>
+          <div class="d-flex flex-column fs-5 w-100 px-2" style='font-size: 12px'>
+              <span class="my-0">
+                <%= link_to follower.fullname, profile_path(follower.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
+              </span>
+              <span class="text-secondary fs-6 my-0 py-0">
+                @<span class="fs-5 fs-6"><%= follower.fullname %></span>
+              </span>
+          </div>
+          <div><%= follow(follower) %></div>
+        </div>
+    <% end %>
+  </article>
+  <article class='p-3'>
+    <h6>FOLLOWING</h6>
+    <% @user.following.each do |follow| %>
+      <div class="d-flex align-items-center justify-content-between my-3">
+          <div class="author">
+              <%= photo(follow)%>
+          </div>
+          <div class="d-flex flex-column fs-5">
+              <span class="">
+                <%= link_to follow.fullname, profile_path(follow.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
+              </span>
+              <span class="text-secondary">
+                @<span class="fs-5 fs-6"><%= follow.fullname %></span>
+              </span>
+          </div>
+          <div><%= follow(follow) %></div>
+        </div>
+    <% end %>
+  </article>
+</section>
