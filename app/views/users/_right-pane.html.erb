@@ -5,13 +5,13 @@
         <div class='mx-3'><%= photo(@user, 'rounded-circle')%></div>
         <span><%= link_to(image_tag('plus-circle.svg', width: '30')) %></span>
       </div>
-      <div class='text-center mt-2'>
+      <div class='text-center my-3'>
         <p class="my-0 py-0"><%= @user.fullname %></p>
         <p class="text-secondarymy-0 py-0">
           @<span style='font-size: 10px'><%= @user.fullname %></span>
         </p>
       </div>
-      <div class='d-flex justify-content-around' style="font-size: 12px">
+      <div class='d-flex justify-content-around my-2 px-2' style="font-size: 12px">
         <div class='text-center'>
           <span><%= @user.opinions.count %></span><br/>
           <span>Tweets</span>
@@ -42,6 +42,25 @@
         </p>
           </div>
           <div><%= follow(follower) %></div>
+        </div>
+    <% end %>
+  </article>
+  <article class='p-3'>
+    <h6>FOLLOWING</h6>
+    <% @user.following.each do |follow| %>
+      <div class="d-flex align-items-center justify-content-between my-3">
+          <div class="author">
+              <%= photo(follow, 'rounded')%>
+          </div>
+          <div class="d-flex flex-column fs-5">
+              <span class="">
+                <%= link_to follow.fullname, profile_path(follow.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
+              </span>
+              <span class="text-secondary">
+                @<span class="fs-5 fs-6"><%= follow.fullname %></span>
+              </span>
+          </div>
+          <div><%= follow(follow) %></div>
         </div>
     <% end %>
   </article>

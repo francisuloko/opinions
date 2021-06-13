@@ -14,7 +14,7 @@ class User < ApplicationRecord
   validates :username, presence: { message: 'Username cannot be blank' }, length: { minimum: 2, maximum: 25 }
   
   def who_to_follow
-    User.all.where.not(id: following).where('id != ?', id).order('created_at DESC')
+    User.all.where.not(id: followers).where('id != ?', id).order('created_at DESC')
   end
 
   private
