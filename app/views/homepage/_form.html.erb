@@ -1,0 +1,8 @@
+<section class='p-3 mx-3'>
+   <div class="card-body mx-4 my-1 border border-1 rounded bg-op">
+        <%= form_for(@opinion, url: opinion_path) do |f| %>
+            <%= f.label 'What\'s happening?', class: 'my-2' %>
+            <%= f.text_field :text, autofocus: true, class: "form-control mb-3", placeholder: "Enter a message..." %>
+        <% end %>
+    </div>
+</section>

@@ -1,15 +1,13 @@
 <section class="d-flex">
     <%= render 'shared/aside' %>
-
     <main class="w-100">
       <%= render 'shared/header' %>
-
       <section class="container-fluid p-0 m-0">
         <div class="row m-0 p-0">
           <div class='col-9 opinions m-0 p-0'>
             <%= cover_image(@user) %>
             <%= render 'users/tabs' %>
-            <%= render 'users/opinions' %>
+            <div class='py-2'><%= render @opinions %></div>
           </div>
           <div class='col-3 p-0 m-0'>
             <%= render 'users/right-pane' %>

@@ -3,21 +3,6 @@
     <div class='border border-1 p-4'>
       <span>WHO TO FOLLOW</span>
     </div>
-    <% @who_to_follow.each do |who| %>
-        <div class="d-flex my-3 px-3">
-          <div class="author">
-              <%= photo(who, 'rounded')%>
-          </div>
-          <div class="d-flex flex-column justify-content_center fs-5 w-100 px-2" style='font-size: 12px'>
-              <span class="my-0">
-                <%= link_to who.fullname, profile_path(who.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
-              </span>
-              <p class="text-secondary my-0 py-0">
-                 @<span style='font-size: 10px'><%= @user.fullname %></span>
-               </p>
-          </div>
-          <div><%= follow(who) %></div>
-        </div>
-      <% end %>
+     <%= render @who_to_follow %>
   </div>
 </article>

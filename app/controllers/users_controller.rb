@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
-  #  before_action :authenticate_user, only: %i[show delete]
+  # before_action :authenticate_user, only: %i[show delete]
   before_action :get_user, only: %i[show edit update]
   
   def show
     @opinion = Opinion.new
     @opinions = @user.opinions.most_recent
+    @followers = @user.followers.all
+    @followings = @user.following.all
   end
    
   def new
@@ -23,12 +25,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit;  end
+  def edit
+    @user = current_user
+  end
   
   def update
+    @user = current_user
     if @user.update(user_params)
-      redirect_to profile_path
+      redirect_to profile_path(@user.username)
     else
+      flash[:notice] = 'Something went wrong'
       render :edit
     end
   end

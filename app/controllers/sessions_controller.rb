@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
 
     if @user
       session[:username] = @user.username
-      flash[:notice] = "You signed in successfully."
       redirect_to root_path
     else
       flash[:notice] = "Something went wrong"

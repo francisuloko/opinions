@@ -23,9 +23,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <%= link_to edit_user_path(current_user), class: 'nav-link text-white' do %>
                 <i class="fas fa-cog"></i>
-              </a>
+              <% end %>
             </li>
           </ul>
         </div>

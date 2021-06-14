@@ -1,0 +1,32 @@
+<% @user.errors.messages.values.each do |message| %>
+    <div class="alert alert-danger alert-dismissible">
+        <%  message.each do |msg| %>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <% msg %>
+        <% end %>
+    </div>
+<% end %>
+<div class='text-start'>
+    <%= form_for(@user, html: {multipart: true}) do |f| %>
+        <div class='form-group my-2'>
+            <%= f.text_field :fullname , placeholder: 'Fullname', class: 'form-control'%>
+        </div>
+    
+        <div class='form-group my-2'>
+            <%= f.text_field :username, placeholder: 'Username',  class: 'form-control' %>
+        </div>
+
+        <div class="form-group my-2">
+            <%= f.label :photo, "Profile photo (optional)" %>
+            <%= f.file_field :photo, accept: "image/jpeg,image/gif,image/png", class: 'form-control' %>
+        </div>
+
+        <div class="form-group my-2">
+           <%= f.label :cover_image, "Cover image (optional)" %>
+            <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png", class: 'form-control' %>
+        </div>
+
+        <%= f.submit :Update , class: 'form-control btn btn-primary my-2'%>
+        <p class='text-center'><%= link_to "Cancel", root_path %></p>
+    <% end %>
+</div>
