@@ -6,11 +6,11 @@ module UsersHelper
       link_to('Unfollow', unfollow_path(user_id: user.id),
               method: :delete,
               style: 'text-decoration: none; font-size: 11px',
-              class: 'bg-twitter p-1 px-2 text-white')
+              class: 'unfollow bg-twitter p-1 px-2 text-white')
     else
       link_to('Follow', follow_path(user_id: user.id), method: :post,
                                                        style: 'text-decoration: none; font-size: 11px',
-                                                       class: 'bg-twitter p-1 px-2 text-white')
+                                                       class: 'follow bg-twitter p-1 px-2 text-white')
     end
   end
 end
