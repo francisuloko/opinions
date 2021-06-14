@@ -1,16 +1,16 @@
 class UsersController < ApplicationController
   # before_action :authenticate_user, only: %i[show delete]
-  before_action :get_user, only: %i[show edit update]
-  
+  before_action :set_user, only: %i[show edit update]
+
   def show
     @opinion = Opinion.new
     @opinions = @user.opinions.most_recent
     @followers = @user.followers.all
     @followings = @user.following.all
   end
-   
+
   def new
-   @user = User.new
+    @user = User.new
   end
 
   def create
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     if @user.update(user_params)
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   private
 
-  def get_user
+  def set_user
     @user = User.find_by(username: params[:username])
   end
 

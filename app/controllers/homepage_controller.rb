@@ -1,6 +1,6 @@
 class HomepageController < ApplicationController
   before_action :authenticate_user
-  
+
   def index
     @user = User.find_by(username: session[:username])
     @opinion = Opinion.new

@@ -7,7 +7,7 @@ module SessionsHelper
     !current_user.nil?
   end
 
-  def autheticate_user      
+  def autheticate_user
     if logged_in?
       flash[:alert] = 'You need to be logged in.'
       redirect_to login_path
