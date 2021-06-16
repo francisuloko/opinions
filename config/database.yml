@@ -4,8 +4,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
   timeout: 5000
-  username: ENV[TWITTER_UNAME]
-  password: ENV['TWITTER_PWD']
+  username: <%= ENV["TWITTER_UNAME"] %>
+  password: <%= ENV["TWITTER_PWD"] %>
 
 development:
   <<: *default
@@ -22,4 +22,4 @@ production:
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: twitter_production
-  password: <%= ENV['TWITTER_PWD'] %>
+  password: <%= ENV["TWITTER_PWD"] %>

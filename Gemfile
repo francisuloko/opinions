@@ -61,7 +61,6 @@ group :development do
   gem 'binding_of_caller'
   # gem 'guard-livereload', '~> 2.5', require: false
   gem 'rack-livereload'
-  gem 'rubocop', '>= 1.0', '< 2.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
