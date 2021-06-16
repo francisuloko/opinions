@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Registration', type: :feature do
-
   it 'registers user in succesfully' do
     visit 'users/new'
     fill_in 'user[fullname]', with: 'francis'
