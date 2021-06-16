@@ -1,8 +1,7 @@
 <% @user.errors.messages.values.each do |message| %>
     <div class="alert alert-danger alert-dismissible">
         <%  message.each do |msg| %>
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <% msg %>
+          <%= msg %>
         <% end %>
     </div>
 <% end %>

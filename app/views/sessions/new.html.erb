@@ -5,8 +5,8 @@
         <%= form_for(:session, url: login_path) do |f| %>
 
             <div class="form-floating">
+              <%= f.label :username %>
               <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class:"form-control", id:"floatingInput"  %>
-              <label for="floatingInput">Username</label>
             </div>
             <div class="checkbox m-3">
                 <label>

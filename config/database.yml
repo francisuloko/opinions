@@ -1,23 +1,25 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
   timeout: 5000
+  username: ENV[TWITTER_UNAME]
+  password: ENV['TWITTER_PWD']
 
 development:
   <<: *default
-  database: twitter_redesign_development
+  database: twitter_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: twitter_redesign_test
+  database: twitter_test
 
 production:
-  adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: twitter_redesign_production
-  username: twitter_redesign
-  password: <%= ENV['TWITTER_REDESIGN_DB_PWD'] %>
+  database: twitter_production
+  password: <%= ENV['TWITTER_PWD'] %>
