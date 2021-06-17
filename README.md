@@ -3,7 +3,6 @@
 > This is a solo project to build a site similar to twitter where users can share their opinions on different topics.
 
 ![](./app/assets/images/screenshot.png)
-<img src='./app/assets/images/screenshot.png' width='500' height='300'>
 
 This project demonstrates my overall understanding of Ruby on Rails. In building this project, I have:
 
