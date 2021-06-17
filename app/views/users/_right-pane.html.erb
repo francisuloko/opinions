@@ -6,6 +6,7 @@
       <div class='text-center my-2'>
         <p class="my-0 py-0"><%= @user.fullname %></p>
         <p class="text-secondarymy-0 py-0">
+          <%= follow(@user) %>
           <span style='font-size: 10px'><%= '@' + @user.username %></span>
         </p>
       </div>
