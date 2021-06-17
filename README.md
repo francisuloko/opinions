@@ -47,9 +47,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Ruby: >=2.6.3
-Rails: >=5.2.3
-Postgres: >=9.5
+- Ruby: >=2.6.3
+- Rails: >=5.2.3
+- Postgres: >=9.5
 
 ### Setup
 
