@@ -2,8 +2,12 @@
 
 > This is a solo project to build a site similar to twitter where users can share their opinions on different topics.
 
+<<<<<<< HEAD
 ![](./app/assets/images/screenshot.png)
 <img src='./app/assets/images/screenshot.png' width='500' height='300'>
+=======
+<img src='./app/assets/images/screenshot.png' alt='twitter redesign screenshot' width='500' height='300'>
+>>>>>>> a520824a5eec6b5e5d2d0d37e0fd791415c8c9e0
 
 This project demonstrates my overall understanding of Ruby on Rails. In building this project, I have:
 
@@ -34,8 +38,7 @@ This project demonstrates my overall understanding of Ruby on Rails. In building
 
 ## Live Demo
 
-[Twitter_redesign](https://)
-
+[Twitter_redesign](https:// )
 
 ## Getting Started
 
