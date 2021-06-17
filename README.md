@@ -2,17 +2,39 @@
 
 > This is a solo project to build a site similar to twitter where users can share their opinions on different topics.
 
-![](./app/assets/image/screenshot.png)
+![](./app/assets/images/screenshot.png)
+<img src='./app/assets/images/screenshot.png' width='500' height='300'>
+
+This project demonstrates my overall understanding of Ruby on Rails. In building this project, I have:
+
+- Use MVC architectural pattern
+- Configure RESTFUL routes
+- Use controllers to intercept user requests
+- Use view templates for HTML with embedded data
+- Connect Database to app using postgres
+- Use Active Record as ORM
+- Use Active Record associations to model real life system (based on Database schema)
+- Use Active Record queries to translate app requirements to SQL queries
+- Use ActiveRecord validations
+- Pass user input from view through controller to model in a safe way
+- Remember about thin controllers and distinction between logic and presentation tiers
+- Avoid n+1 queries problem
+- Use unit tests (Rspec)
+- Use ActiveRecord validations
+- Deploy apps heroku
+- Translate business requirements into software solutions
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby v3.0.1
+- Ruby on Rails v6.1.3
+- Bootstrap
+- yarn
 - Rspec
 
 ## Live Demo
 
-[Stay-In-Touch](https://stark-waters-40080.herokuapp.com/posts)
+[Twitter_redesign](https://)
 
 
 ## Getting Started
@@ -62,11 +84,13 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-### Deployment
+### Close Terminal
 
-TBA
+```
+    Ctrl + C
+```
 
-## Authors
+## Author
 
 👤 **Francis Uloko**
 
@@ -84,9 +108,11 @@ Feel free to check the [issues page](https://github.com/francisuloko/twitter-red
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgmentss
+## Acknowledgments
 
-TBA
+- The Odin Project
+- Ruby on Rails Guide
+- Gregoire Vella for inspiration on Behance
 
 ## 📝 License
 
