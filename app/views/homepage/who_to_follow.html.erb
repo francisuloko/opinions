@@ -1,0 +1,10 @@
+<div class="d-flex my-3 px-2">
+    <div class="author">
+        <%= photo(who, 'rounded-circle small-photo')%>
+    </div>
+    <div class="d-flex flex-column justify-content-center fs-6 w-100 px-2" style='font-size: 12px'>
+        <%= link_to who.fullname, profile_path(who.username), class: "text-dark my-0 py-0", style: 'text-decoration: none'%>
+        <span class='text-secondary' style='font-size: 10px'><%= '@' + who.username %></span>
+    </div>
+    <div><%= follow(who) %></div>
+</div>
