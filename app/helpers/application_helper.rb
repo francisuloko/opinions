@@ -1,7 +1,7 @@
 module ApplicationHelper
   def photo(user, style)
     if user.photo.present?
-      image_tag(user.photo, alt: user.username, class: style, width: '70', height: '70')
+      image_tag(user.photo, alt: '', class: style, width: '70', height: '70')
     else
       image_tag('default_profile.jpg', alt: user.username, class: style, width: '70', height: '70')
     end
@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def cover_image(user)
     if user.cover_image.present?
-      image_tag(user.cover_image, alt: user.username, width: '100%', height: '220')
+      image_tag(user.cover_image, alt: '', width: '100%', height: '220')
     else
       image_tag('default_cover.jpg', alt: user.username, width: '100%', height: '220')
     end
