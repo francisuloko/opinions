@@ -33,7 +33,7 @@ This project demonstrates my overall understanding of Ruby on Rails. In building
 
 ## Live Demo
 
-[Twitter_redesign](https:// )
+[Twitter_redesign](https://twitter-redesign-capstone.herokuapp.com/)
 
 ## Getting Started
 
@@ -111,6 +111,10 @@ Give a ⭐️ if you like this project!
 - The Odin Project
 - Ruby on Rails Guide
 - Gregoire Vella for inspiration on Behance
+- Nsabimana Emmanuel
+- Rose Sumba
+- Geronimo Morisot
+- Shaher Shamroukh
 
 ## 📝 License
 
