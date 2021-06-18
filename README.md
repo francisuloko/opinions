@@ -30,6 +30,7 @@ This project demonstrates my overall understanding of Ruby on Rails. In building
 - Bootstrap
 - yarn
 - Rspec
+- Amazon S3
 
 ## Live Demo
 
