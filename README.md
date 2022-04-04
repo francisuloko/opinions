@@ -34,7 +34,7 @@ This project demonstrates my overall understanding of Ruby on Rails. In building
 
 ## Live Demo
 
-[Twitter_redesign](https://twitter-redesign-capstone.herokuapp.com/)
+View live site [here](https://twitter-redesign-capstone.herokuapp.com/)
 
 ## Getting Started
 
@@ -101,7 +101,7 @@ Open `http://localhost:3000/` in your browser.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/francisuloko/twitter-redesign-capstone/issues).
+Feel free to check the [issues page](https://github.com/francisuloko/opinions/issues).
 
 ## Show your support
 
